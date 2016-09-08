@@ -1,6 +1,5 @@
 document.onkeydown = function (n) {
     var t = window.event ? n.keyCode : n.which;
-    console.log(t);
     n.shiftKey ? notes.b_c.indexOf(t) != -1 && piano.music("b" + t, 3) : notes.w_c.indexOf(t) != -1 && piano.music("a" + t, 1)
 };
 document.onmouseup = function () {
@@ -33,7 +32,6 @@ function play(c) {
     } else {
         n.keyCode = getKeyCode(c.toUpperCase());
     }
-    console.log(n);
     if (isShiftKeyEnabled(c)) {
         n.shiftKey = true;
     }
