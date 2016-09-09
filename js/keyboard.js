@@ -45,19 +45,22 @@ function pair(c, dir, step) {
     dir = dir || 1;
     step = step || 1;
     var conjugate = ((i = notes.w_n.indexOf(c)) !== -1) ? notes.w_n[i + 7*dir*step] : ((i = notes.b_n.indexOf(c) !== -1) && notes.b_n[i + 5*dir* step]);
-    if (conjugate === false) conjugate = undefined;
+    if (conjugate === false || conjugate === undefined) conjugate = '';
     return conjugate;
 }
 
 function two(c, dir) {
     dir = dir || 1;
+    var conjugate = pair(c, dir);
     if (dir === -1) {
-        return pair(c, dir) + c;
+        return conjugate + c;
     } else if (dir === 1) {
-        return c + pair(c, dir);
+        return c + conjugate;
     }
 }
 
 function three(c) {
-    return pair(c, -1) + c + pair(c, 1);
+    var prev = pair(c, -1),
+        next = pair(c, 1);
+    return prev + c + next;
 }
