@@ -48,3 +48,16 @@ function pair(c, dir, step) {
     if (conjugate === false) conjugate = undefined;
     return conjugate;
 }
+
+function two(c, dir) {
+    dir = dir || 1;
+    if (dir === -1) {
+        return pair(c, dir) + c;
+    } else if (dir === 1) {
+        return c + pair(c, dir);
+    }
+}
+
+function three(c) {
+    return pair(c, -1) + c + pair(c, 1);
+}
