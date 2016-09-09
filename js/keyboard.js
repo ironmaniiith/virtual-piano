@@ -38,3 +38,13 @@ function play(c) {
     var t = n.keyCode;
     n.shiftKey ? notes.b_c.indexOf(t) != -1 && piano.music("b" + t, 3) : notes.w_c.indexOf(t) != -1 && piano.music("a" + t, 1)
 }
+
+
+function pair(c, dir, step) {
+    var i;
+    dir = dir || 1;
+    step = step || 1;
+    var conjugate = ((i = notes.w_n.indexOf(c)) !== -1) ? notes.w_n[i + 7*dir*step] : ((i = notes.b_n.indexOf(c) !== -1) && notes.b_n[i + 5*dir* step]);
+    if (conjugate === false) conjugate = undefined;
+    return conjugate;
+}
