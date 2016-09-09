@@ -1,12 +1,17 @@
-function playSong(sequence, index, duration) {
+function playSong(sequence, index, duration, subduration) {
+	subduration = subduration || duration / 3.5;
 	var val = sequence[index];
 	if (val !== undefined) {
 		setTimeout(function(){
 			var length = val.length;
 			for (var i = 0; i < length; i++) {
-				play(val[i]);
+				(function(j){
+					setTimeout(function() {
+						play(val[j]);
+					}, subduration * j);
+				})(i);
 			}
-			playSong(sequence, index + 1, duration);
+			playSong(sequence, index + 1, duration, subduration);
 		}, duration);
 	}
 }
