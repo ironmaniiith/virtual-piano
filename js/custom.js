@@ -1,6 +1,6 @@
 function PlaySong(sequence, index, duration, subduration) {
-    if (!(this instanceof playSong)) {
-        return new playSong(sequence, index, duration, subduration);
+    if (!(this instanceof PlaySong)) {
+        return new PlaySong(sequence, index, duration, subduration);
     } else {
         this.sequence = sequence;
         this.index = index;
