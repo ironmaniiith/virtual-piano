@@ -4,13 +4,16 @@
 }
 
 body {
+    background: url(../style/img/bk/retro-microphone.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     -moz-user-select: -moz-none;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
-    margin: 35px 0 0 0;
-    background: url(../style/img/bk/5.jpg);
     cursor: default;
 }
 
