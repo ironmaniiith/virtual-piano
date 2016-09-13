@@ -19,3 +19,6 @@ var titanic = ['t','y','y8u', ' 0','w','','i','u','y','t','5y','9','wo','','',''
 'e','0o','et','0','5','9t','ws','9s','w','9o','wt','9','4','8t','qs','8s','q','8o','qt','8','5','9t','ws','9','ets','9','ra','9','u',
 'ets','9','ra','1ts','8','w','t','u','i','o','s','f','g','h','l','x','c','v','c','mty'];
 var song = PlaySong(titanic, 0, 362, 30);
+
+
+// See the video here: https://www.youtube.com/watch?v=sCfHpMwx4zo
